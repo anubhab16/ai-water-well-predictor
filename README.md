@@ -10,3 +10,4 @@ Models: Random Forest Regressor, XGBoost (benchmarked against each other — no 
 Evaluation: R², RMSE, MAE
 Interface: Streamlit — input a region and time period, get a predicted groundwater level, risk category, and supporting visualizations (trend + feature importance)
 Stack: Python, Pandas, NumPy, scikit-learn, XGBoost, Matplotlib, Seaborn, Streamlit
+<img src="architecture_Diagram.png" alt="Alternative text" width="500">
