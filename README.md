@@ -1,406 +1,371 @@
 <div align="center">
 
-🌊 AI-ENABLED WATER WELL PREDICTOR 🤖
+# 💧 AI-ENABLED WATER WELL PREDICTOR
 
-Predict. Classify. Protect Groundwater. 🌍
-
-PRJ-314 · Mini Project (CSE7102)
-B.Tech. Computer Engineering (Artificial Intelligence & Machine Learning)
-Presidency University
+### *Predicting groundwater levels. Classifying well risk. Enabling smarter water decisions.*
 
 <br>
 
+[![Project](https://img.shields.io/badge/Project-PRJ--314-0A66C2?style=for-the-badge)](https://github.com/anubhab16/ai-water-well-predictor)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-RF%20%7C%20XGBoost-FF6F00?style=for-the-badge)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Interface-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Status](https://img.shields.io/badge/Status-Review%201-2EA44F?style=for-the-badge)](#-project-status)
 
+<br>
 
+**A sensor-free AI/ML solution for groundwater-level prediction and well-risk assessment**
 
+<br>
 
-
-
-
-
+[🚀 Repository](https://github.com/anubhab16/ai-water-well-predictor)
+&nbsp;&nbsp;•&nbsp;&nbsp;
+[📖 Research](#-research-foundation)
+&nbsp;&nbsp;•&nbsp;&nbsp;
+[👥 Team](#-project-team)
 
 </div>
 
-💧 The Big Idea
+---
 
-Groundwater is one of India's primary freshwater resources, yet conventional well-site assessment can depend on slow, resource-intensive manual surveys.
+## 🌊 Why This Project?
 
-AI-Enabled Water Well Predictor proposes a software-only, sensor-free approach that uses historical groundwater and climate data to:
+Groundwater is one of India's primary freshwater resources.
 
-🔮 Predict groundwater levels → 📊 quantify prediction confidence → ⚠️ classify well risk → 🧭 support practical groundwater decisions
+Yet traditional well-site assessment can depend on **manual surveys that are slow, resource-intensive, and difficult to scale**.
 
-The project works with historical data spanning 1994–2025 and benchmarks Random Forest against XGBoost to investigate effective tree-based machine-learning approaches for groundwater prediction.
+This project explores a different approach:
 
-🎯 Problem Statement
+> **Can historical groundwater and climate data be transformed into an AI-powered decision-support system that predicts groundwater levels and identifies well risk — without relying on sensors or IoT hardware?**
 
-Problem Statement Number: PRJ-314
-Category: Software
-Difficulty: Medium
+### Our answer:
 
-Design and develop a solution for an AI-enabled water well predictor using modern technologies to improve performance, automation, security, scalability, and real-world usability.
+**Yes — through machine learning. 🤖**
 
-🚀 What Makes This Project Different?
+The proposed system uses historical groundwater and climate data from **1994–2025**, trains and benchmarks **Random Forest** and **XGBoost**, and delivers the results through a **Streamlit interface**.
 
-Conventional Approach 🏚️
+---
 
-Our Approach 🤖
+# 🎯 Problem Statement
 
-Manual field surveys
+> **PRJ-314 — Software**
 
-AI-assisted prediction
+Design and develop a solution for an **AI-enabled water well predictor** using modern technologies to improve:
 
-Resource-intensive assessment
+- ⚡ Performance
+- 🤖 Automation
+- 🔐 Security
+- 📈 Scalability
+- 🌍 Real-world usability
 
-Software-based workflow
+**Difficulty:** Medium
 
-Sensor/IoT dependency may be required
+---
 
-No sensors or IoT required
+# 💡 What Does The System Do?
 
-Assessment can be slow
+The system follows a simple but powerful pipeline:
 
-Automated prediction pipeline
+```text
+        🌍 HISTORICAL DATA
+        Groundwater + Climate
+                │
+                ▼
+        🧹 DATA PREPROCESSING
+                │
+                ▼
+        🧠 MODEL TRAINING
+        ┌───────┴────────┐
+        ▼                ▼
+   🌲 Random Forest   ⚡ XGBoost
+        │                │
+        └───────┬────────┘
+                ▼
+        🔮 GROUNDWATER
+           PREDICTION
+                │
+                ▼
+        🎯 CONFIDENCE /
+          ERROR MARGIN
+                │
+                ▼
+        ⚠️ RISK CLASSIFICATION
+        ┌───────┼────────┐
+        ▼       ▼        ▼
+      🟢 Safe 🟡 Declining 🔴 Critical
+                │
+                ▼
+        📊 STREAMLIT DASHBOARD
+```
 
-Raw measurements can be difficult to interpret
+---
 
-Safe / Declining / Critical risk classification
+# 🧠 Core Intelligence
 
-Limited decision support
+## 1. 🔮 Groundwater Level Prediction
 
-Visual trends + feature importance
+The model predicts the groundwater level, expressed in **meters**, for a selected station and time period.
 
-🔥 Core Innovation
+## 2. 🎯 Prediction Confidence
 
-The project combines groundwater-level prediction with a practical well-risk classification layer, turning a numerical prediction into an easier-to-understand decision-support output.
+The system is designed to provide a **prediction interval / error margin** based on validation performance.
 
-🧠 AI/ML Pipeline
+## 3. ⚠️ Well-Risk Classification
 
-┌─────────────────────┐
-│   🌐 DATA SOURCE    │
-│ Groundwater +       │
-│ Climate Data        │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   🧹 PREPROCESSING  │
-│ Cleaning • Features │
-│ Preparation         │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   🧠 MODEL TRAINING │
-│ Random Forest       │
-│       vs            │
-│ XGBoost             │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   🔮 PREDICTION     │
-│ Groundwater Level   │
-│       (meters)      │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   ⚠️ RISK ENGINE    │
-│ Safe / Declining /  │
-│ Critical            │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   📊 STREAMLIT UI   │
-│ Prediction + Trends │
-│ + Feature Importance│
-└─────────────────────┘
+Instead of showing only a numerical prediction, the system translates the result into practical categories:
 
-🧩 System Architecture
+| Status | Meaning |
+|:---:|---|
+| 🟢 **SAFE** | Favorable well condition |
+| 🟡 **DECLINING** | Groundwater condition indicates decline |
+| 🔴 **CRITICAL** | High-risk groundwater condition |
 
-Input Layer
+## 4. 📈 Historical Trends
 
-🌎 Region / station
-📅 Date / time period
-🌧️ Historical climate information
-💧 Historical groundwater information
+Users can visualize historical groundwater behavior to better understand changes over time.
 
-Processing Layer
+## 5. 🧠 Feature Importance
 
-Data preprocessing
+The system is designed to provide a feature-importance breakdown, making the prediction process more interpretable.
 
-Feature preparation
+---
 
-Model training
+# 🏗️ System Architecture
 
-Validation
+```mermaid
+flowchart TD
 
-Performance comparison
+    A["🌍 Groundwater + Climate Data"] --> B["🧹 Data Preprocessing"]
 
-Intelligence Layer
+    B --> C["📊 Feature Preparation"]
 
-Two tree-based approaches are benchmarked:
+    C --> D["🌲 Random Forest"]
+    C --> E["⚡ XGBoost"]
 
-🌲 Random Forest Regressor
+    D --> F["📏 Groundwater Level Prediction"]
+    E --> F
 
-⚡ XGBoost
+    F --> G["🎯 Confidence / Error Margin"]
 
-Decision Layer
+    G --> H["⚠️ Risk Classification"]
 
-The system produces:
+    H --> I["🟢 Safe"]
+    H --> J["🟡 Declining"]
+    H --> K["🔴 Critical"]
 
-📏 Predicted groundwater level in meters
+    F --> L["📈 Historical Trend"]
+    F --> M["🧠 Feature Importance"]
 
-🎯 Model confidence indicator / prediction interval
+    I --> N["🖥️ Streamlit Interface"]
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+```
 
-🚨 Well-risk classification
+---
 
-📈 Historical groundwater trend
+# ⚙️ Technology Stack
 
-🧠 Feature-importance breakdown
+<div align="center">
 
-📊 Expected Output
+| Layer | Technology |
+|:---|:---|
+| 🐍 **Language** | Python 3.x |
+| 📊 **Data Processing** | Pandas, NumPy |
+| 🌲 **ML Model 1** | Random Forest Regressor |
+| ⚡ **ML Model 2** | XGBoost |
+| 📐 **Evaluation** | R², RMSE, MAE |
+| 📈 **Visualization** | Matplotlib, Seaborn |
+| 🖥️ **Web Interface** | Streamlit |
+| 📓 **Development** | Jupyter Notebook / Google Colab / VS Code |
+| 🔧 **Version Control** | GitHub |
+| 🗃️ **Dataset** | Kaggle — India Groundwater Climate Time-Series |
+| 📡 **Special Hardware** | None |
 
-The system is designed to provide a practical dashboard experience:
+</div>
 
-🔮 Groundwater Prediction
+---
 
-A predicted groundwater level in meters for the selected station and time period.
+# 📊 Machine Learning Approach
 
-🎯 Confidence Indicator
+The project specifically explores **tree-based ensemble models** for groundwater-level prediction.
 
-A prediction interval / error margin based on validation performance.
+### 🌲 Random Forest
 
-⚠️ Well-Risk Classification
+Random Forest provides an ensemble-based regression approach for predicting groundwater levels.
 
-Classification
+### ⚡ XGBoost
 
-Meaning
+XGBoost provides a gradient-boosting approach that can be benchmarked against Random Forest.
 
-🟢 SAFE
+### ⚖️ Why Compare Both?
 
-Suitable / relatively favorable groundwater condition
+Existing research does not establish one universally dominant model for groundwater-level prediction.
 
-🟡 DECLINING
+Therefore, rather than assuming a model is best, this project follows a **benchmarking approach**:
 
-Groundwater condition indicates a declining trend
+```text
+Random Forest
+      │
+      ├──────► R²
+      ├──────► RMSE
+      └──────► MAE
 
-🔴 CRITICAL
-
-High-risk condition requiring attention
-
-📈 Supporting Visualizations
-
-Historical groundwater trend
-
-Feature-importance breakdown
-
-The project therefore aims to move beyond simply predicting a number and provide interpretable decision support.
-
-🖥️ User Experience
-
-The final output is planned through a Streamlit interface.
-
-User
- │
- ├── Select Region
- │
- ├── Select Date / Period
- │
- ▼
-AI Water Well Predictor
- │
- ├── 🔮 Predicted Groundwater Level
- │
- ├── 🎯 Confidence / Error Margin
- │
- ├── ⚠️ Well Risk Category
- │
- ├── 📈 Historical Trend
- │
- └── 🧠 Feature Importance
-
-🛠️ Technology Stack
-
-👨‍💻 Programming
-
-
-
-📦 Data & Numerical Processing
-
-Pandas
-
-NumPy
-
-🧠 Machine Learning
-
-scikit-learn
-
-Random Forest Regressor
+             VS
 
 XGBoost
+      │
+      ├──────► R²
+      ├──────► RMSE
+      └──────► MAE
+```
+
+The better-performing approach can then be considered for the prediction pipeline based on validation results.
+
+---
+
+# 📏 Model Evaluation
+
+The project evaluates model performance using three standard regression metrics:
+
+### `R²`
+Measures how well the model explains variation in the target.
+
+### `RMSE`
+Measures the magnitude of prediction error while giving greater weight to larger errors.
+
+### `MAE`
+Measures the average absolute prediction error.
+
+> 📌 Actual model scores are intentionally not listed here because the Review-1 document does not provide final numerical evaluation results.
+
+---
+
+# 🌐 Streamlit Experience
+
+The final system is designed around a simple interaction:
+
+```text
+┌─────────────────────────────────────────────┐
+│          💧 WATER WELL PREDICTOR             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  📍 Select Region / Station                 │
+│                                             │
+│  📅 Select Date / Time Period               │
+│                                             │
+│             [ 🔮 PREDICT ]                  │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  Groundwater Level     🎯 Confidence        │
+│                                             │
+│      XX.XX m             XX% / ±X.XX        │
+│                                             │
+│  Risk Status: 🟢 SAFE                      │
+│                                             │
+├─────────────────────────────────────────────┤
+│                                             │
+│  📈 Historical Groundwater Trend            │
+│                                             │
+│  🧠 Feature Importance                      │
+│                                             │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+# 🗃️ Dataset
+
+### 📌 Source
+
+**Kaggle — India Groundwater Climate Time-Series (1994–2025)**
+
+The project uses historical groundwater and climate data covering the period **1994–2025**.
+
+The dataset forms the foundation of:
+
+```text
+Historical Data
+      ↓
+Preprocessing
+      ↓
+Feature Engineering / Preparation
+      ↓
+Model Training
+      ↓
+Validation
+      ↓
+Prediction
+```
+
+---
+
+# 🖥️ System Requirements
+
+| Requirement | Minimum / Recommended |
+|:---|:---|
+| 💻 Operating System | Windows / macOS / Linux |
+| 🐍 Python | 3.8+ |
+| 🧠 IDE | Jupyter / Google Colab / VS Code |
+| 🧮 RAM | 4 GB minimum / 8 GB recommended |
+| ⚙️ Processor | Intel i3 or above |
+| 💾 Storage | 2 GB+ free space |
+| 🎮 GPU | Not required |
+| 📡 IoT / Sensors | Not required |
+| 📊 Dataset | Kaggle account |
+
+---
 
-📐 Model Evaluation
+# 🚀 Getting Started
 
-The project specifies:
+## 1️⃣ Clone the Repository
 
-R²
-
-RMSE
-
-MAE
-
-📊 Visualization
-
-Matplotlib
-
-Seaborn
-
-🌐 Application / Deployment
-
-Streamlit
-
-🔧 Development & Version Control
-
-Jupyter Notebook
-
-Google Colab
-
-VS Code
-
-GitHub
-
-📚 Dataset
-
-Dataset Source
-
-Kaggle — India Groundwater Climate Time-Series (1994–2025)
-
-The project uses historical groundwater and climate data covering a long time period to build and evaluate prediction models.
-
-📌 Dataset access requires a Kaggle account according to the project requirements.
-
-🧪 Model Evaluation
-
-The project benchmarks two major tree-based approaches:
-
-🌲 Random Forest Regressor
-
-An ensemble-based regression approach used as one of the primary prediction models.
-
-⚡ XGBoost
-
-A gradient-boosting approach evaluated against Random Forest.
-
-📏 Evaluation Metrics
-
-R²    → Goodness of fit
-RMSE  → Magnitude of prediction error
-MAE   → Average absolute prediction error
-
-The project literature review indicates that tree-based ensemble approaches are well suited to this problem, while no single model is assumed to dominate; therefore, Random Forest vs XGBoost benchmarking is part of the proposed methodology.
-
-🌍 SDG Alignment
-
-🌱 United Nations Sustainable Development Goals
-
-The project is aligned with SDG 9 as stated in the project review.
-
-Industry, Innovation and Infrastructure
-
-The proposed solution emphasizes:
-
-💻 Scalable software
-
-💰 Low-cost implementation
-
-📡 No specialized sensor/IoT hardware
-
-🤖 AI-assisted decision support
-
-🌎 Potential real-world groundwater management applications
-
-💻 System Requirements
-
-Requirement
-
-Specification
-
-💻 OS
-
-Windows / macOS / Linux
-
-🐍 Python
-
-3.8+
-
-🧠 IDE
-
-Jupyter / Google Colab / VS Code
-
-📦 Libraries
-
-Pandas, NumPy, scikit-learn, XGBoost, Matplotlib, Seaborn, Streamlit
-
-📊 Dataset
-
-Kaggle access
-
-⚙️ Processor
-
-Intel i3 or above
-
-🧮 RAM
-
-Minimum 4 GB · 8 GB recommended
-
-💾 Storage
-
-At least 2 GB free
-
-🎮 GPU
-
-Not required
-
-📡 IoT Hardware
-
-None required
-
-⚡ Getting Started
-
-The review document specifies the technology stack and environment, but does not provide a finalized installation command sequence. The commands below are a conventional project setup example rather than information directly stated in the review.
-
-1️⃣ Clone the repository
-
+```bash
 git clone https://github.com/anubhab16/ai-water-well-predictor.git
 cd ai-water-well-predictor
+```
 
-2️⃣ Create a virtual environment
+## 2️⃣ Create a Virtual Environment
 
+### Windows
+
+```bash
 python -m venv venv
-
-Activate it:
-
-Windows
-
 venv\Scripts\activate
+```
 
-macOS / Linux
+### macOS / Linux
 
+```bash
+python3 -m venv venv
 source venv/bin/activate
+```
 
-3️⃣ Install dependencies
+## 3️⃣ Install Dependencies
 
+```bash
 pip install pandas numpy scikit-learn xgboost matplotlib seaborn streamlit
+```
 
-4️⃣ Run the Streamlit application
+## 4️⃣ Launch the Application
 
+```bash
 streamlit run app.py
+```
 
-⚠️ Replace app.py with the actual application entry point if the repository uses a different filename.
+> ⚠️ The Review-1 presentation specifies Streamlit as the interface technology but does not specify the exact application entry filename. Replace `app.py` if the repository uses another filename.
 
-📁 Suggested Project Structure
+---
 
+# 📁 Recommended Repository Structure
+
+```text
 ai-water-well-predictor/
 │
 ├── 📂 data/
-│   └── groundwater_climate_data.csv
+│   └── groundwater_climate.csv
 │
 ├── 📂 notebooks/
 │   └── model_training.ipynb
@@ -416,201 +381,254 @@ ai-water-well-predictor/
 │   └── risk_classification.py
 │
 ├── 📂 visualizations/
-│   ├── groundwater_trend.py
+│   ├── trends.py
 │   └── feature_importance.py
 │
 ├── 📄 app.py
 ├── 📄 requirements.txt
 ├── 📄 README.md
 └── 📄 LICENSE
+```
 
-This structure is a recommended organization for the project README; the uploaded review does not specify the repository's exact folder structure.
+> This is a **recommended organization**, not the exact repository structure documented in the Review-1 presentation.
 
-🔗 Project Repository
+---
 
-⭐ GitHub
-
-Repository:
-https://github.com/anubhab16/ai-water-well-predictor
-
-<a href="https://github.com/anubhab16/ai-water-well-predictor">
-<img src="https://img.shields.io/badge/⭐%20View%20Project%20on%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-</a>
-
-🗓️ Project Roadmap
-
-The project review includes a project timeline / Gantt chart. The detailed task-by-task dates are presented visually in the review material.
-
-Overall Flow
-
-📚 Literature Review
-       ↓
-🧹 Data Preparation
-       ↓
-🧠 Model Development
-       ↓
-⚖️ RF vs XGBoost Benchmarking
-       ↓
-🔮 Prediction System
-       ↓
-⚠️ Risk Classification
-       ↓
-📊 Streamlit Interface
-       ↓
-🚀 Final Deployment / Demonstration
-
-🔮 Future Potential
-
-Based on the project's stated objective of improving performance, automation, security, scalability, and real-world usability, the system is positioned as a foundation for a broader groundwater decision-support platform.
-
-Potential directions can include:
-
-📍 Expanding geographic coverage
-
-📊 More extensive model benchmarking
-
-🧠 Improving prediction confidence estimation
-
-🌐 Scaling the Streamlit application
-
-🗺️ Richer geographical visualization
-
-🔄 More frequent data updates
-
-🏛️ Integration into groundwater-management workflows
-
-📖 Research Foundation
-
-The project review references research covering machine learning, deep learning, ensemble methods, and groundwater-level prediction.
-
-Selected References
-
-Rohde, M. M., Biswas, T., Housman, I. W., Campbell, L. S., Klausmeyer, K. R., & Howard, J. K. (2021). A machine learning approach to predict groundwater levels in California reveals ecosystems at risk. Frontiers in Earth Science, 9, 784499.
-
-Davari, S., Eslamian, S., Jamali, M., & Safavi, H. R. (2025). Application of machine learning algorithms for groundwater level prediction in the Najafabad plain. Scientific Reports.
-
-Jesse, G. et al. (2025). A systematic review of machine learning models for groundwater level prediction. Applied Computing and Geosciences, 28, 100303.
-
-Sarkar, H., Mishra, R., & Ojha, C. S. P. (2025). Application of machine learning techniques in the evaluation of local groundwater level using field gravity data. Hydrology Research, 56(5), 383–396.
-
-Pham, Q. B. et al. (2022). Groundwater level prediction using machine learning algorithms in a drought-prone area. Neural Computing and Applications, 34, 10751–10773.
-
-Chen, H.-Y., Vojinovic, Z., Lo, W., & Lee, J.-W. (2023). Groundwater level prediction with deep learning methods. Water, 15(17), 3118.
-
-Khan, J., Lee, E., Balobaid, A. S., & Kim, K. (2023). A comprehensive review of conventional, machine learning, and deep learning models for groundwater level (GWL) forecasting. Applied Sciences, 13(4), 2743.
-
-Thakur, A., Chandel, A., & Shankar, V. (2025). Prediction of groundwater levels using a long short-term memory (LSTM) technique. Journal of Hydroinformatics, 27(1), 51–68.
-
-Ali, A. S. A. et al. (2024). An overview of deep learning applications in groundwater level modeling. Applied Computational Intelligence and Soft Computing, 2024, 9480522.
-
-Feng, F., Ghorbani, H., & Radwan, A. E. (2024). Predicting groundwater level using traditional and deep machine learning algorithms. Frontiers in Environmental Science, 12, 1291327.
-
-👥 Meet the Team
-
-🧑‍💻 Project Contributors
-
-#
-
-Contributor
-
-Roll Number
-
-Role
-
-01
-
-Anubhab Parashar
-
-20231COM0043
-
-👨‍💻 Team Member
-
-02
-
-Aman Kundu
-
-20231COM0088
-
-👨‍💻 Team Member
-
-03
-
-Avdhesh Ghansela
-
-20231COM0082
-
-👨‍💻 Team Member
-
-🤝 Team Philosophy
-
-Three minds. One mission. Smarter groundwater decisions. 💧🧠🌍
-
-👨‍🏫 Under the Guidance Of
-
-Mr. Muthuraj V
-
-Associate Professor
-School of Computer Science and Engineering
-Presidency University
-
-Academic Coordination
-
-HoD / Team Leader: Dr. Gopal K Shyam
-
-Program Project Coordinator: Ms. Sumita Guddin
-
-School Project Coordinator: Mr. Muthuraju V
-
-Panel No.: 25
-
-🎓 Academic Information
-
-Institution: Presidency University
-School: School of Computer Science and Engineering
-Program: B.Tech. Computer Engineering (Artificial Intelligence & Machine Learning)
-Course: Mini Project — CSE7102
-Project ID: PRJ-314
-Review: Review-1
-Date: 29-08-2026
-
-🏆 Project Vision
-
-             💧 WATER
-                │
-                ▼
-        📊 HISTORICAL DATA
-                │
-                ▼
-           🧠 AI / ML
-                │
-        ┌───────┴───────┐
-        ▼               ▼
-   🔮 PREDICTION     ⚠️ RISK
-        │               │
-        └───────┬───────┘
-                ▼
-       📊 DECISION SUPPORT
-                │
-                ▼
-          🌍 BETTER WATER
-           MANAGEMENT
-
-Our goal is simple:
-
-Use AI to make groundwater assessment more accessible, scalable, and actionable. 🌱
+# 🌍 SDG 9 Alignment
 
 <div align="center">
 
-💧 Predict Smarter. Manage Better. Protect Tomorrow. 🌍
+### 🌱 Sustainable Development Goal 9
 
-⭐ If this project inspires you, consider giving the repository a star!
+## **Industry, Innovation & Infrastructure**
+
+</div>
+
+The project aligns with the stated SDG-9 direction through its focus on:
+
+**🤖 AI-driven innovation**  
+**💻 Software-based infrastructure**  
+**💰 Low-cost implementation**  
+**📈 Scalability**  
+**📡 Sensor-free operation**
+
+The intended outcome is a scalable and accessible tool that can support groundwater-management decisions.
+
+---
+
+# 🗺️ Project Roadmap
+
+```mermaid
+timeline
+    title AI-Enabled Water Well Predictor
+
+    Review 1 : Problem Definition
+             : Literature Review
+             : Architecture
+             : Technology Selection
+
+    Development : Data Preparation
+                : Model Development
+                : RF vs XGBoost Benchmarking
+
+    Prediction : Groundwater Level Prediction
+               : Confidence Estimation
+               : Risk Classification
+
+    Application : Streamlit Interface
+                : Visualization
+                : Feature Importance
+
+    Final Stage : Testing
+                : Evaluation
+                : Demonstration
+```
+
+---
+
+# 🔮 Future Scope
+
+The project is designed as a foundation for a broader groundwater decision-support system.
+
+Potential future directions include:
+
+- 🗺️ Geographic visualization
+- 📍 Larger regional coverage
+- 🔄 More frequent data updates
+- 🧠 Additional ML model benchmarking
+- 📊 Improved confidence estimation
+- 🌐 Scalable web deployment
+- 🏛️ Integration with groundwater-management workflows
+- 📡 Future integration with live data sources
+
+---
+
+# 📚 Research Foundation
+
+The Review-1 presentation references research covering machine learning, deep learning, ensemble methods, and groundwater-level prediction.
+
+### Selected References
+
+1. **Rohde, M. M. et al. (2021)**  
+   *A machine learning approach to predict groundwater levels in California reveals ecosystems at risk.*  
+   Frontiers in Earth Science, 9, 784499.  
+   https://doi.org/10.3389/feart.2021.784499
+
+2. **Davari, S. et al. (2025)**  
+   *Application of machine learning algorithms for groundwater level prediction in the Najafabad plain.*  
+   Scientific Reports.  
+   https://doi.org/10.1038/s41598-025-32376-1
+
+3. **Jesse, G. et al. (2025)**  
+   *A systematic review of machine learning models for groundwater level prediction.*  
+   Applied Computing and Geosciences, 28, 100303.  
+   https://doi.org/10.1016/j.acags.2025.100303
+
+4. **Pham, Q. B. et al. (2022)**  
+   *Groundwater level prediction using machine learning algorithms in a drought-prone area.*  
+   Neural Computing and Applications, 34, 10751–10773.  
+   https://doi.org/10.1007/s00521-022-07009-7
+
+5. **Chen, H.-Y. et al. (2023)**  
+   *Groundwater level prediction with deep learning methods.*  
+   Water, 15(17), 3118.  
+   https://doi.org/10.3390/w15173118
+
+6. **Khan, J. et al. (2023)**  
+   *A comprehensive review of conventional, machine learning, and deep learning models for groundwater level forecasting.*  
+   Applied Sciences, 13(4), 2743.
+
+7. **Thakur, A. et al. (2025)**  
+   *Prediction of groundwater levels using a long short-term memory (LSTM) technique.*  
+   Journal of Hydroinformatics, 27(1), 51–68.
+
+8. **Ali, A. S. A. et al. (2024)**  
+   *An overview of deep learning applications in groundwater level modeling.*  
+   Applied Computational Intelligence and Soft Computing, 2024, 9480522.
+
+9. **Feng, F. et al. (2024)**  
+   *Predicting groundwater level using traditional and deep machine learning algorithms.*  
+   Frontiers in Environmental Science, 12, 1291327.
+
+---
+
+# 👥 Project Team
+
+<div align="center">
+
+## 🧑‍💻 THE TEAM BEHIND THE PROJECT
+
+</div>
+
+| 👤 Member | 🎓 Roll Number | 💼 Contribution |
+|:---|:---:|:---|
+| **Anubhab Parashar** | `20231COM0043` | 🤝 Project Team Member |
+| **Aman Kundu** | `20231COM0088` | 🤝 Project Team Member |
+| **Avdhesh Ghansela** | `20231COM0082` | 🤝 Project Team Member |
+
+### 🤝 Three Members. One Vision.
+
+> **Turning groundwater data into actionable intelligence.** 💧🧠
+
+---
+
+# 👨‍🏫 Project Supervision
+
+### **Mr. Muthuraj V**
+**Associate Professor**  
+School of Computer Science and Engineering  
+Presidency University
+
+### Academic Coordination
+
+| Position | Name |
+|:---|:---|
+| 🎓 HoD / Team Leader | **Dr. Gopal K Shyam** |
+| 📋 Program Project Coordinator | **Ms. Sumita Guddin** |
+| 🏫 School Project Coordinator | **Mr. Muthuraju V** |
+| 🔢 Panel | **25** |
+
+---
+
+# 🎓 Academic Details
+
+**University:** Presidency University  
+**School:** School of Computer Science and Engineering  
+**Program:** B.Tech. Computer Engineering (Artificial Intelligence & Machine Learning)  
+**Course:** Mini Project — CSE7102  
+**Project ID:** PRJ-314  
+**Review:** Review-1  
+**Date:** 29 August 2026
+
+---
+
+# 📌 Project Status
+
+<div align="center">
+
+### 🟢 REVIEW 1
+
+**Problem ✔️**  
+**Literature Review ✔️**  
+**Architecture ✔️**  
+**Technology Selection ✔️**  
+**Expected Output ✔️**
+
+### 🚧 Development in Progress
+
+</div>
+
+---
+
+# ⭐ Why This Project Matters
+
+```text
+          TODAY
+            │
+            ▼
+   🌊 Groundwater Data
+            │
+            ▼
+        🤖 AI / ML
+            │
+            ▼
+      🔮 Prediction
+            │
+            ▼
+      ⚠️ Risk Insight
+            │
+            ▼
+      🧠 Better Decisions
+            │
+            ▼
+      🌍 Sustainable
+       Water Management
+```
+
+The goal isn't simply to **predict groundwater levels**.
+
+The goal is to make those predictions **understandable, actionable, scalable, and useful for real-world decision-making.**
+
+---
+
+<div align="center">
+
+# 💧 Predict Smarter.
+# 🌱 Manage Better.
+# 🌍 Protect Tomorrow.
 
 <br>
 
-Built with 🧠 AI + 💻 Python + 🌊 Groundwater Data + ❤️ Teamwork
+### Built with
+
+**🐍 Python · 🧠 Machine Learning · 📊 Data · 🌊 Groundwater · 🤝 Teamwork**
 
 <br>
 
-PRJ-314 · CSE7102 · Presidency University
+[![GitHub](https://img.shields.io/badge/VIEW%20SOURCE%20CODE-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anubhab16/ai-water-well-predictor)
+
+<br><br>
+
+**PRJ-314 · CSE7102 · Presidency University**
 
 </div>
